@@ -1,0 +1,33 @@
+---
+layout: layoutHome
+title: Developer & Facilitator - Brian Gunzenhauser
+metaDesc: "Brian Gunzenhauser is a developer and educator, with nearly 20 years building websites and over 10 years teaching
+in higher education and for Fortune 500 companies."
+pagination:
+    data: collections.post
+    size: 3
+    alias: posts
+---
+
+<section class="intro">
+    <h1 class="intro__heading">Hey, I'm Brian.
+        <span class="intro__heading-context">I'm a web developer and facilitator. I also like to run, read, write, and cook pasta on Fridays.</span></h1>
+    <a href="/about/" class="button button__link">More about me »</a>
+</section>
+
+<section class="post-list">
+    <h2>Recent Posts</h2>
+    <ol class="post-list__group">
+        {% for post in posts %}
+            <li class="post-list__item">
+                <article>
+                    <header>
+                        <h4>
+                            <a href="{{ post.url | url }}" class="post-list__item-link">{{ post.data.title }}</a>
+                        </h4>
+                    </header>
+                </article>
+            </li>
+        {% endfor %}
+    </ol>
+</section>

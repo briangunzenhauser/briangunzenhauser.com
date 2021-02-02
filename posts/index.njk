@@ -1,0 +1,31 @@
+---
+layout: layoutPosts
+title: Thoughts on work and technology
+metaDesc: Read Brian Gunzenhauser's thoughts on web, technology, facilitation, and life.
+pagination:
+  data: collections.post
+  size: 6
+  alias: posts
+---
+
+<section class="intro">
+    <h1 class="intro__heading">Posts.
+        <span class="intro__heading-context">Thoughts on the web, technology, facilitation, and life.</span></h1>
+</section>
+
+<section class="post-list">
+    <h2>All Posts</h2>
+    <ol class="post-list__group">
+        {% for post in posts %}
+            <li class="post-list__item">
+                <article>
+                    <header>
+                        <h4>
+                            <a href="{{ post.url | url }}" class="post-list__item-link">{{ post.data.title }}</a>
+                        </h4>
+                    </header>
+                </article>
+            </li>
+        {% endfor %}
+    </ol>
+</section>

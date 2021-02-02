@@ -1,0 +1,13 @@
+.bio {
+    // bio stuff here
+    .bio__content {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 2rem;
+
+        @include breakpoint(medium) {
+            grid-template-columns: 200px auto;
+            
+        }
+    }
+}

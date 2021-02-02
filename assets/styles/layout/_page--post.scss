@@ -1,0 +1,42 @@
+.post {
+            
+    h1 {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0;
+    }
+
+    p { 
+        &:nth-of-type(1) {
+            &::first-letter {
+                font-size: 6rem;
+                font-weight: 800;
+                margin-top: 0.25rem;
+                padding-right: 1rem;
+                padding-bottom: 0.25rem;
+                line-height: 1;
+                float: left;
+                color: #aaa;
+            }
+        }
+
+    }
+
+    .post__intro {
+        & > p {
+            color: red;
+        }
+    }
+
+    /** Add space below a codepen wrapper */
+    .cp_embed_wrapper {
+        margin-bottom: 1rem;
+    }
+}
