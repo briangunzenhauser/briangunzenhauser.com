@@ -41,6 +41,6 @@ exports.render = (data) => {
                 <p>&copy; ${currentYear} Brian Gunzenhauser. Built with <a href="https://11ty.dev">Eleventy</a>.</p>
             </footer>
         </body >
-    </html >
+    </html>
     `;
 };
