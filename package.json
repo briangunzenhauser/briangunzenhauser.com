@@ -10,6 +10,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.1.0"
+  },
+  "dependencies": {
+    "luxon": "^1.26.0"
+  }
 }
