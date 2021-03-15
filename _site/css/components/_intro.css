@@ -1,0 +1,12 @@
+.intro {
+    margin-bottom: 2.5rem;
+}
+
+.intro h1.intro__heading {
+    color: #ddd;  
+    margin-bottom: 2rem;
+}
+
+.intro h1.intro__heading > span.intro__heading-context {
+    color: #aaa;
+}

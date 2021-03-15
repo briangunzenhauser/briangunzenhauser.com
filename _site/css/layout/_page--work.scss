@@ -1,0 +1,26 @@
+.work {
+
+    .work__content {
+        .work__list {
+            .work__list-term {
+                background: hsla(0, 0%, 0%, 0.5);
+                padding: 1rem 1rem 0;
+            }
+
+            .work__list-definition {
+                margin-bottom: 1.5rem;
+                padding-bottom: 1.5rem;
+                border-bottom: solid 1px gray;
+                background: hsla(0, 0%, 0%, 0.5);
+                padding: 0 1rem 1rem;
+
+                p {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

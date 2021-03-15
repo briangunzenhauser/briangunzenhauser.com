@@ -20,14 +20,14 @@ exports.render = (data) => {
             <title>${data.title}</title>
             <meta name="description" content="${data.metaDesc}">
             <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="/assets/styles/main.css">
+            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="/css/main.css">
         </head>
         <body>
             <header class="site-header">
                 <div class="header__logo"><a href="/" class="${this.page.url === '/' ? 'curr' : ''}" title="Home">Brian <span>Gunzenhauser</span></a></div>
                 <nav>
-                    <ul>
+                    <ul role="list">
                         <li><a href="/about" class="${this.page.url === '/about/' ? 'curr' : ''}">About</a></li>
                         <li><a href="/posts/" class="${this.page.url === '/posts/' ? 'curr' : ''}">Posts</a></li>
                         <li><a href="/contact" class="${this.page.url === '/contact/' ? 'curr' : ''}">Contact</a></li>

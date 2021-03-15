@@ -1,0 +1,11 @@
+.button {
+    border-radius: var(--border__radius);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.button.button__link {
+    background: hsla(200, 0%, 50%, 1);
+    color: hsla(200, 0%, 10%, 1);
+}

@@ -1,0 +1,13 @@
+body {
+    background: var(--color__primary);
+    color: var(--color__text);
+    font-family: var(--font);
+
+    & > header.site-header,
+    & > main.site-main,
+    & > footer.site-footer {
+        padding: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

@@ -1,5 +1,4 @@
 const fs = require("fs");
-// let moment = require('moment-timezone');
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({
@@ -15,8 +14,12 @@ module.exports = function (eleventyConfig) {
         }
     });
 
-    // eleventyConfig.addPassthroughCopy("css");
-    eleventyConfig.addPassthroughCopy("assets/images");
+    eleventyConfig.addPassthroughCopy("css")
+    return {
+        passthroughFileCopy: true
+    }
+
+    // eleventyConfig.addPassthroughCopy("assets/images");
 
     // eleventyConfig.addFilter("dateformat", function (dateIn) {
     //     return moment(dateIn).tz('GMT').format('YYYY MMMM DD');

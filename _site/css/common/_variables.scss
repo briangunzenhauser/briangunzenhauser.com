@@ -1,0 +1,15 @@
+:root {
+    --font: 'Work Sans', sans-serif;
+    --color__primary: hsla(200, 100%, 3%, 1);
+    --color__primary--main: hsla(200, 20%, 20%, 1);
+    --color__secondary:hsla(48, 100%, 64%, 1); // #ffBB66
+    --color__text: hsla(200, 0%, 90%, 1);
+    --color__link: hsla(200, 100%, 70%, 1);
+    --border: dotted 1px white;
+    --border__body: dotted 0.2ch hsla(200, 10%, 50%, 1);
+    --border__radius: 0.25rem;
+    --breakpoint__medium: 768px;
+    --breakpoint__large: 960px;
+}
+
+// https://kolormark.com/brands/monokai
