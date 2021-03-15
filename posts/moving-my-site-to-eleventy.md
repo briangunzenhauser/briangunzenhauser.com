@@ -21,7 +21,7 @@ I mostly attribute the performance bump to the static nature of the site. There 
 
 ## Developing with Eleventy is FUN
 
-Strangely, I was a little overwhelmed by the simplicity of Eleventy. All of the build tools that I'm accustomed to getting in newer frameworks like Gatsby or Next aren't built-in, which means I need to set it up. I realized quickly that it is the beauty of Eleventy. No more webpack or bloat that I don't need. Now I just use a simple Parcel integration and I'm good to go. 
+Strangely, I was a little overwhelmed by the simplicity of Eleventy. All of the build tools that I'm accustomed to getting in newer frameworks like Gatsby or Next aren't built-in, which means I need to set it up. I realized quickly that it is the beauty of Eleventy. No more webpack or bloat that I don't need. For the moment I've reverted back to vanilla CSS in an effort to reduce layers of complexity until I figure out a smarter and simpler tooling setup.
 
 I also appreciate that I can use various template types that compile down to HTML. My original plan was to use JavaScript as the basis for all of my templates so that I could push myself with some newer JavaScript ES6+ features, but I eventually simplified the process to using Nunjucks for page templates and markdown for blog posts so that I could launch the site more quickly. Moving to JavaScript templates can be a later phase of the project.
 
