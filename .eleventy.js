@@ -18,11 +18,4 @@ module.exports = function (eleventyConfig) {
     return {
         passthroughFileCopy: true
     }
-
-    // eleventyConfig.addPassthroughCopy("assets/images");
-
-    // eleventyConfig.addFilter("dateformat", function (dateIn) {
-    //     return moment(dateIn).tz('GMT').format('YYYY MMMM DD');
-    // });
-
 }
