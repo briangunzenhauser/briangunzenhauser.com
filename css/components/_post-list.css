@@ -17,6 +17,6 @@
     border-bottom: none;
 }
 
-.post-list .post-list__group .post-list__item:last-child .post-list__item-link {
+.post-list .post-list__group .post-list__item .post-list__item-link {
     text-decoration: underline;
 }
