@@ -2,7 +2,8 @@
     --font: 'Work Sans', sans-serif;
     --color__primary: hsla(200, 100%, 3%, 1);
     --color__primary--main: hsla(200, 20%, 20%, 1);
-    --color__secondary:hsla(48, 100%, 64%, 1);
+    --color__code: hsla(200, 0%, 20%, 1);
+    --color__secondary: hsla(48, 100%, 64%, 1);
     --color__text: hsla(200, 0%, 90%, 1);
     --color__link: hsla(200, 100%, 70%, 1);
     --border: dotted 1px white;
