@@ -36,7 +36,7 @@ I'm going to start with some setup and a quick fallback to ensure an address can
         </code>
     </pre>
 
-Just add these two script tags to the HTML page where your form exists. Pretty simple, right? Now we can layer on the automatic address generation.
+Just add these two script tags to the HTML page where your form exists. Pretty simple, right? Now we can layer on the reverse geocoding.
 
 ## Getting a street address from geographic coordinates
 
@@ -187,7 +187,7 @@ If you paste the URL from the console output into your browser, you’ll see tha
     </code>
 </pre>
 
-You may notice that there's a formatted_address key that provides the entire street address, city,state, zip code, and country. Cool! Now all we need to do is parse that JSON data so we can get the precise location data to use for the form. 
+You may notice that there's a formatted_address key that provides the entire street address, city, state, zip code, and country. Cool! Now all we need to do is parse that JSON data so we can get the precise location data to use for the form. 
 
 #### Step 3: Parse the Geocoded JSON data and prompt the visitor
 I'm using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch" target="_blank" rel="noopener">JavaScript fetch() method</a> to parse the JSON data. In this case, I'm getting the formattted_address key value stored in the JSON output, but you could essentially get any location data you wanted. 
