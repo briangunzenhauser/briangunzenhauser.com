@@ -44,7 +44,7 @@ You’ll use the same project created in the Google Cloud Console because it inv
 
 To get a street address from geographic coordinates, you’ll need to use <a href="https://developers.google.com/maps/documentation/geocoding/overview" target="_blank" rel="noopener">Google’s Geocoding API</a>, and combine that with GeoLocation. We can break this down into three steps.
 
-### Step 1: Use the GeoLocation API to get a visitor's coordinates 
+#### Step 1: Use the GeoLocation API to get a visitor's coordinates 
 First we're going to use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API" target="_blank" rel="noopener">GeoLocation API</a> to ask a visitor if we can use their location, and then store those coordinates in a variable for later use. This shows logging the coordinates to the console to be sure we have them.
 
 <pre>
@@ -65,7 +65,7 @@ First we're going to use the <a href="https://developer.mozilla.org/en-US/docs/W
     </code>
 </pre>
 
-### Step 2: Store the Google API reverse geocoding endpoint URL in a variable 
+#### Step 2: Store the Google API reverse geocoding endpoint URL in a variable 
 I'm using template literals here to easily reference and include the latitude and longitude variables. An example of how to create this URL can be found on <a href="https://developers.google.com/maps/documentation/geocoding/requests-reverse-geocoding" target="_blank" rel="noopener">Google’s Reverse Geocoding</a> documentation page. I'm again logging this variable endpoint URL to the console, because we'll need to copy and paste it.
 
 <pre>
@@ -189,7 +189,7 @@ If you paste the URL from the console output into your browser, you’ll see tha
 
 You may notice that there's a formatted_address key that provides the entire street address, city,state, zip code, and country. Cool! Now all we need to do is parse that JSON data so we can get the precise location data to use for the form. 
 
-### Step 3: Parse the Geocoded JSON data and prompt the visitor
+#### Step 3: Parse the Geocoded JSON data and prompt the visitor
 I'm using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch" target="_blank" rel="noopener">JavaScript fetch() method</a> to parse the JSON data. In this case, I'm getting the formattted_address key value stored in the JSON output, but you could essentially get any location data you wanted. 
 
 Now, you could use this address to just fill out the address field, but that might cause confusion since the visitor didn't initiate it. However, we could add a prompt to see if they would like to use their current address to fill out the form. Here's how we can do it:
