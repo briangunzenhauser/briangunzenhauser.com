@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import Layout from '../components/layout'
 import introStyles from '../styles/Intro.module.css'
 import buttonStyles from '../styles/Button.module.css'
