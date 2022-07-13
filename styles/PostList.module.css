@@ -1,0 +1,32 @@
+.postList {
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.postList h2 {
+    margin-bottom: 0.5rem;
+}
+
+
+.postListItem {
+    list-style: none;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 1px gray;
+    width: 70%;
+}
+
+.postListItem:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.postListItem a {
+    color: var(--color__link);
+    font-size: 1.125rem;
+}
+
+.postListItem a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+.siteHeader {
+    background: var(--color__primary);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50%;
+    position: sticky;
+    top: 0;
+    padding: 1.5rem;
+}
+
+@media screen and (min-width: 960px) {
+    .siteHeader {
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 100%;
+        align-items: end;
+    }
+}
+
+.headerLogo {
+    font-size: 2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.headerLogo span {
+    display: table;
+}
+
+.headerLogo>a.curr {
+    color: #E6DB74;
+}

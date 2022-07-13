@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font: 'Work Sans', sans-serif;
+  --color__primary: hsla(200, 100%, 3%, 1);
+  --color__primary--main: hsla(200, 20%, 20%, 1);
+  --color__code: hsla(200, 0%, 20%, 1);
+  --color__secondary: hsla(48, 100%, 64%, 1);
+  --color__text: hsla(200, 0%, 90%, 1);
+  --color__link: hsla(200, 100%, 70%, 1);
+  --border: dotted 1px white;
+  --border__body: dotted 0.2ch hsla(200, 10%, 50%, 1);
+  --border__radius: 0.25rem;
+  /* --breakpoint__medium: 768px;
+    --breakpoint__large: 960px; */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Work sans', serif;
+}
+
+html {
+  scroll-padding-top: 112px;
+}
+
+body {
+  background: var(--color__primary);
+  color: var(--color__text);
+  font-family: var(--font);
+}
+
+body>* {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--color__link);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.curr {
+  border-bottom: solid 2px #E6DB74;
+  color: #E6DB74;
+}
+
+.homeCurr {
+  color: #E6DB74;
+}
+
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-weight: 800;
+
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.625rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 1.375rem;
+  }
+}
+
+
+p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+p>strong {
+  font-weight: 800;
+}
+
+ol,
+ul {
+  margin-bottom: 1rem;
+}
+
+ol li,
+ul li {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+
+  ol li,
+  ul li {
+    font-size: 1.125rem;
+  }
+}

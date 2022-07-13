@@ -1,0 +1,17 @@
+.siteMain {
+    padding: 1.5rem;
+    border-top: var(--border__body);
+    border-bottom: var(--border__body);
+    background: var(--color__primary--main);
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    padding: 1.5rem;
+}
+
+@media screen and(min-width: 768px) {
+    .siteMain {
+        grid-template-columns: 80%;
+    }
+}

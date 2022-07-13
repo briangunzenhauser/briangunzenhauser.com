@@ -1,8 +1,8 @@
 ---
 layout: layoutPost
-title: Moving from Wordpress to Eleventy
+title: 'Moving from Wordpress to Eleventy'
 tags: post
-date: 2021-03-08
+date: '2021-03-08'
 ---
 
 # Moving from Wordpress to Eleventy

@@ -1,0 +1,8 @@
+.introHeading {
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+.introHeading>span {
+    color: #aaa;
+}

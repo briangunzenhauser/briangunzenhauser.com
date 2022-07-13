@@ -1,8 +1,8 @@
 ---
 layout: layoutPost
-title: Using Data Attributes for Mobile Column Titles in Responsive Tables
+title: 'Using Data Attributes for Mobile Column Titles in Responsive Tables'
 tags: post
-date: 2021-01-31
+date: '2021-08-01'
 ---
 
 # Using Data Attributes for Mobile Column Titles in Responsive Tables
@@ -13,14 +13,7 @@ While it works great, one thing that didn't sit well was that I was putting cont
 
 By using a data-title attribute in the cell of the table, the attr() function can be referenced in a CSS attribute selector that grabs the data-title to be shown in the :before pseudo element content attribute.  In re-reading the article recently, I noticed a small blurb at the bottom of the page - as well as a mention in the comments - that links to this solution, but I completely overlooked it the first time I referenced the article. I figured I would write a post on it in case it's overlooked by anyone else.
 
-Here's a pen that shows a simple example of how it works.
-
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="briangunzenhauser" data-slug-hash="JjboOMj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Using data-title for column headings in responsive tables">
-  <span>See the Pen <a href="https://codepen.io/briangunzenhauser/pen/JjboOMj">
-  Using data-title for column headings in responsive tables</a> by Brian (<a href="https://codepen.io/briangunzenhauser">@briangunzenhauser</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+[Here's a pen that shows a simple example of how it works](https://codepen.io/briangunzenhauser/pen/JjboOMj).
 
 
 What I like about this is two-fold. One, it respects the separation of concerns and keeps content out of CSS. And two, it can keep the management of the title in one spot if using a CMS, such as ACF in Wordpress.

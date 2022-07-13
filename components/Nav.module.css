@@ -1,0 +1,48 @@
+.mainNav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media screen and (min-width: 960px) {
+    .mainNav {
+        justify-content: flex-end;
+    }
+}
+
+.mainNav>ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    align-items: space-around;
+}
+
+@media screen and (min-width: 960px) {
+    .mainNav>ul {
+        margin: 0;
+    }
+}
+
+.mainNav>ul>li {
+    margin: 0 1rem 0 0.5rem;
+}
+
+.mainNav a {
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 0;
+}
+
+.mainNav>ul>li:not(:last-child) a::after {
+    content: "/";
+    color: white;
+    position: absolute;
+    right: -1rem;
+    cursor: default;
+}
+
+@media screen and (min-width: 768px) {
+    .mainNav>ul>li>a::after {
+        right: -1rem;
+    }
+}

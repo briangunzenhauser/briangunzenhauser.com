@@ -1,8 +1,8 @@
 ---
 layout: layoutPost
-title: Getting a Street Address from Geographic Coordinates
+title: 'Getting a Street Address from Geographic Coordinates'
 tags: post
-date: 2021-01-01
+date: '2022-06-24'
 ---
 
 # Getting a Street Address from Geographic Coordinates
@@ -47,8 +47,7 @@ To get a street address from geographic coordinates, you’ll need to use <a hre
 #### Step 1: Use the GeoLocation API to get a visitor's coordinates 
 First we're going to use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API" target="_blank" rel="noopener">GeoLocation API</a> to ask a visitor if we can use their location, and then store those coordinates in a variable for later use. This shows logging the coordinates to the console to be sure we have them.
 
-<pre>
-    <code>
+```
         if ('geolocation' in navigator)
 
             navigator.geolocation.getCurrentPosition((position) => {
@@ -62,14 +61,12 @@ First we're going to use the <a href="https://developer.mozilla.org/en-US/docs/W
 
             });
         }
-    </code>
-</pre>
+```
 
 #### Step 2: Store the Google API reverse geocoding endpoint URL in a variable 
 I'm using template literals here to easily reference and include the latitude and longitude variables. An example of how to create this URL can be found on <a href="https://developers.google.com/maps/documentation/geocoding/requests-reverse-geocoding" target="_blank" rel="noopener">Google’s Reverse Geocoding</a> documentation page. I'm again logging this variable endpoint URL to the console, because we'll need to copy and paste it.
 
-<pre>
-    <code>
+```
     if ('geolocation' in navigator) {
     
             navigator.geolocation.getCurrentPosition((position) => {
@@ -89,27 +86,21 @@ I'm using template literals here to easily reference and include the latitude an
     
             });
     }
-    </code>
-</pre>
+```
 
 The value you get from from pos_endpoint in this step is really important. Let's take a closer look at it:
-<pre>
-    <code>
-        const pos_endpoint = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=YOUR_API_KEY`;
-    </code>
-</pre>
+```
+    const pos_endpoint = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=YOUR_API_KEY`;
+```
 
 The lat and long template literals turn this URL into something like this:
-<pre>
-    <code>
-        https://maps.googleapis.com/maps/api/geocode/json?latlng=40.0411599,-76.3061783&key=YOUR_API_KEY
-    </code>
-</pre>
+```
+    https://maps.googleapis.com/maps/api/geocode/json?latlng=40.0411599,-76.3061783&key=YOUR_API_KEY
+```
 
 
 If you paste the URL from the console output into your browser, you’ll see that the result is a JSON object. It should look something like this: 
-<pre>
-    <code>
+```
     {
        "plus_code" : {
           "compound_code" : "2MRV+FG8 Lancaster, PA, USA",
@@ -184,8 +175,7 @@ If you paste the URL from the console output into your browser, you’ll see tha
              },
              "types" : [ "street_address" ]
           },
-    </code>
-</pre>
+```
 
 You may notice that there's a formatted_address key that provides the entire street address, city, state, zip code, and country. Cool! Now all we need to do is parse that JSON data so we can get the precise location data to use for the form. 
 
@@ -200,8 +190,7 @@ Now, you could use this address to just fill out the address field, but that mig
     - If no, hide the prompt so the visitor can use the autocomplete fallback. 
 - If a visitor ignores the prompt and starts to type in the field, hide the prompt.
 
-<pre>
-    <code>
+```
     if ('geolocation' in navigator) {
 
         // Store the input field as a variable
@@ -271,8 +260,7 @@ Now, you could use this address to just fill out the address field, but that mig
         }
 
     }
-    </code>
-</pre>
+```
 
 That’s it! The latitude and longitude are now reverse geocoded into a street address, and a visitor will be prompted to use that address to fill out the form.
 
