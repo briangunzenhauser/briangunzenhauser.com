@@ -3,7 +3,7 @@ import buttonStyles from '../styles/Button.module.css'
 
 export default function Form() {
     return (
-        <form name="contact" method="POST" data-netlify="true" className={formStyles.contactForm}>
+        <form name="contact" action="/thanks" method="POST" data-netlify="true" className={formStyles.contactForm}>
             <label for="yourname">Your Name</label>
             <input type="text" name="yourname" id="yourname" placeholder="Your name" />
 

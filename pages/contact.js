@@ -14,7 +14,7 @@ export default function Contact() {
             </Head>
 
             <Layout>
-                <h2 className={introStyles.introHeading}>Contact. A way to reach me.</h2>
+                <h1 className={introStyles.introHeading}>Contact. <span>A way to reach me.</span></h1>
                 <p>Hey there. Drop me a line, I would enjoy hearing from you.</p>
                 <br />
                 <br />
