@@ -62,5 +62,19 @@
     padding: 1rem;
     background: hsla(0, 0%, 10%, 1);
     margin-bottom: 2rem;
+    /* overflow-x: scroll; */
     overflow-x: scroll;
+    white-space: pre-wrap;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    word-break: break-all;
+}
+
+@media screen and (min-width: 768px) {
+    .post pre {
+        word-break: keep-all;
+        white-space: nowrap;
+        /* white-space: normal; */
+    }
 }
