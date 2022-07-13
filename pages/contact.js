@@ -17,7 +17,6 @@ export default function Contact() {
                 <h1 className={introStyles.introHeading}>Contact. <span>A way to reach me.</span></h1>
                 <p>Hey there. Drop me a line, I would enjoy hearing from you.</p>
                 <br />
-                <br />
                 <Form />
             </Layout>
         </div>
