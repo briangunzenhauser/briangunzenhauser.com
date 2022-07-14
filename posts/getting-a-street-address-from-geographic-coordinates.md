@@ -20,11 +20,11 @@ I'm going to start with some setup and a quick fallback to ensure an address can
 1. Selecting an existing project or creating a new one.
 2. Enabling the Places API.
 3. Load the Places API library on your page:
-    ```
-    <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"&gt;&lt;/script>
+    ```js
+    <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script>
     ```
 4. Connect the Autocomplete class to your street address input:
-    ```
+    ```js
     <script>
         new google.maps.places.Autocomplete(
             document.getElementById("street-address")
@@ -43,8 +43,8 @@ To get a street address from geographic coordinates, you’ll need to use <a hre
 #### Step 1: Use the GeoLocation API to get a visitor's coordinates 
 First we're going to use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API" target="_blank" rel="noopener">GeoLocation API</a> to ask a visitor if we can use their location, and then store those coordinates in a variable for later use. This shows logging the coordinates to the console to be sure we have them.
 
-```
-if ('geolocation' in navigator)
+```js
+if ('geolocation' in navigator) {
 
     navigator.geolocation.getCurrentPosition((position) => {
                     
@@ -62,7 +62,7 @@ if ('geolocation' in navigator)
 #### Step 2: Store the Google API reverse geocoding endpoint URL in a variable 
 I'm using template literals here to easily reference and include the latitude and longitude variables. An example of how to create this URL can be found on <a href="https://developers.google.com/maps/documentation/geocoding/requests-reverse-geocoding" target="_blank" rel="noopener">Google’s Reverse Geocoding</a> documentation page. I'm again logging this variable endpoint URL to the console, because we'll need to copy and paste it.
 
-```
+```js
 if ('geolocation' in navigator) {
 
     navigator.geolocation.getCurrentPosition((position) => {
@@ -85,18 +85,18 @@ if ('geolocation' in navigator) {
 ```
 
 The value you get from from pos_endpoint in this step is really important. Let's take a closer look at it:
-```
+```js
 const pos_endpoint = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=YOUR_API_KEY`;
 ```
 
 The lat and long template literals turn this URL into something like this:
-```
+```html
 https://maps.googleapis.com/maps/api/geocode/json?latlng=40.0411599,-76.3061783&key=YOUR_API_KEY
 ```
 
 
 If you paste the URL from the console output into your browser, you’ll see that the result is a JSON object. It should look something like this: 
-```
+```json
 {
     "plus_code" : {
         "compound_code" : "2MRV+FG8 Lancaster, PA, USA",
@@ -188,7 +188,7 @@ Now, you could use this address to just fill out the address field, but that mig
     - If no, hide the prompt so the visitor can use the autocomplete fallback. 
 - If a visitor ignores the prompt and starts to type in the field, hide the prompt.
 
-```
+```js
 if ('geolocation' in navigator) {
 
     // Store the input field as a variable
