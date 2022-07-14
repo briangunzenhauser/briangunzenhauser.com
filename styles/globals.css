@@ -9,6 +9,8 @@
   --color__code: hsla(200, 0%, 20%, 1);
   --color__secondary: hsla(48, 100%, 64%, 1);
   --color__text: hsla(200, 0%, 90%, 1);
+  --color__p: hsla(200, 0%, 80%, 1);
+  --color__postTitle: hsla(310, 27%, 62%, 1);
   --color__link: hsla(200, 100%, 70%, 1);
   --border: dotted 1px white;
   --border__body: dotted 0.2ch hsla(200, 10%, 50%, 1);
@@ -110,6 +112,7 @@ p {
   line-height: 1.75rem;
   font-weight: 300;
   margin-bottom: 1rem;
+  color: var(--color__p);
 }
 
 @media screen and (min-width: 768px) {

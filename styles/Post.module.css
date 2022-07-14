@@ -8,6 +8,7 @@
 .post h1 {
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
+    color: var(--color__postTitle);
 }
 
 .post h2,
@@ -69,12 +70,13 @@
     display: block;
     height: auto;
     word-break: break-all;
+    font-size: 0.75rem;
 }
 
 @media screen and (min-width: 768px) {
     .post pre {
         word-break: keep-all;
-        white-space: nowrap;
+        /* white-space: nowrap; */
         /* white-space: normal; */
     }
 }

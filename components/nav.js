@@ -15,7 +15,7 @@ export default function Nav() {
 
                 <li>
                     <Link href="/posts">
-                        <a className={router.pathname == "/posts" ? "curr" : ""}>Posts</a>
+                        <a className={router.pathname == "/posts" ? "curr" : router.pathname === "/posts/[id]" ? "curr" : ""}>Posts</a>
                     </Link>
                 </li>
 
