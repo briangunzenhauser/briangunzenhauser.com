@@ -19,7 +19,7 @@ Maybe that's not entirely true, but compared to [11ty](https://11ty.dev), the do
 I still maintain that an SSG is perfect for this site, but my lack of writing over the past year tells me that authoring in Notion.so and then transcribing it to Markdown is just too laborous. I plan to pair Next.js with a yet-to-be-decided CMS. I'm still looking into the pros and cons of a git-based or an api-based headless CMS. 
 
 #### A note on web standards
-It would be reticent of me to not mention that React doesn't exactly jibe with my strong believe in web standards. I also recoginize that there is way too much technical debt with the amount of Javascript that's deployed these days. However, I also believe there has to be a balance between progress, performance, and developer experience, and I believe that Next.js accomplishes all three really well. 
+It would be reticent of me to not mention that React doesn't exactly jibe with my strong belief in web standards. I also recoginize that there is way too much technical debt with the amount of Javascript that's deployed these days. However, I also believe there has to be a balance between progress, performance, and developer experience, and I believe that Next.js accomplishes all three really well. 
 
 And with that, I'm on to powering this site with Next.js. 
 
