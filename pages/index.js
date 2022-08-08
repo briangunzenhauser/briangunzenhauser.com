@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
 
       <Layout>
         <div>
-          <h1 className={introStyles.introHeading}>Hey, I'm Brian. <span>I work with people and web technologies. I also like to run, read, write, and cook pasta on Fridays.</span></h1>
+          <h1 className={introStyles.introHeading}>Hi, I&apos;m Brian. <span>I develop website applications and facilitate workshops on emerging technologies.</span></h1>
 
           <Link href="/about">
             <a className={buttonStyles.buttonLink}>More about me &raquo;</a>
