@@ -1,0 +1,52 @@
+.fractionalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 3rem 0;
+  gap: 1rem;
+}
+
+.fractionalGrid > div {
+  background: white;
+  color: black;
+  padding: 1rem;
+}
+
+.fractionalGrid > div h4 {
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.fractionalGrid > div p {
+  color: var(--color__primary);
+  font-style: italic;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+}
+
+.fractionalGrid > div li {
+  list-style: disc;
+  margin-left: 1rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.fractionalContent h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--color__p);
+}
+
+.fractionalCTA {
+  background: var(--color__secondary);
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: var(--color__primary);
+}
+
+.fractionalHighlight {
+  background: var(--color__secondary);
+  color: var(--color__primary);
+  padding: 0.25rem;
+}
