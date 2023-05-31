@@ -40,9 +40,8 @@ export default function FractionalWebTechnologyServices() {
                   project execution.
                 </li>
                 <li>Team and resource growth and development</li>
-                <li>
-                  Capital allocation assessment Develop long-term goals and KPIs
-                </li>
+                <li>Capital allocation assessment</li>
+                <li>Develop long-term goals and KPIs</li>
               </ul>
             </div>
 
