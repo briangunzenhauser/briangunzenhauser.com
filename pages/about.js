@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import BrianGunzenhauser from "../public/brian-gunzenhauser.webp";
+import BrianGunzenhauser from "../public/brian-gunzenhauser.png";
 import introStyles from "../styles/Intro.module.css";
 import aboutStyles from "../styles/About.module.css";
 import Layout from "../components/layout";
@@ -51,7 +51,7 @@ export default function About() {
             <p>
               I build things and enable others to do their best, and I work with
               calculated efficiency. I&apos;ve developed in-person and online
-              courses, created a BFA, managed a team, owned projects, and
+              courses, helped launch a BFA, managed a team, owned projects, and
               developed more websites than I can count. I love to learn, and to
               push myself to understand what&apos;s new and what&apos;s next.
             </p>
