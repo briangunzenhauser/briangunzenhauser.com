@@ -17,7 +17,7 @@ export default function Home({ allPostsData }) {
 
       <Layout>
         <div>
-          <h1 className={introStyles.introHeading}>Hi, I&apos;m Brian. <span>I design learning experiences and facilitate workshops on emerging technologies for Fortune 500 organizations—backed by 15+ years of technical 
+          <h1 className={introStyles.introHeading}>Hi, I&apos;m Brian. <span>I design learning experiences and facilitate workshops on emerging technologies for Fortune 500 organizations—backed by 20+ years of technical 
 expertise.</span></h1>
 
           <Link href="/about">

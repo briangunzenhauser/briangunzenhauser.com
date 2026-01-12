@@ -33,28 +33,12 @@ export default function About() {
           </div>
           <div>
             <p>
-              Hey, I&apos;m Brian. I&apos;ve been developing websites since
-              2002, and I facilitate sessions on web and technology.
+              Hey, I&apos;m Brian. I design learning experiences and facilitate workshops that help organizations understand emerging technologies.
             </p>
-            <p>
-              I work at the intersection of technology, business, and education.
-              For nearly 20 years, I&apos;ve helped businesses by building,
-              managing, or overseeing their online properties. I used that
-              experience to develop a curriculum of website design and
-              development courses at the Pennsylvania College of Art &amp;
-              Design, and then taught those courses for nearly 10 years.
-              I&apos;ve also facilitated sessions on technology to fortune 500
-              companies to help upskill their staff to be more productive in
-              their day-to-day roles.
-            </p>
-
-            <p>
-              I build things and enable others to do their best, and I work with
-              calculated efficiency. I&apos;ve developed in-person and online
-              courses, helped launch a BFA, managed a team, owned projects, and
-              developed more websites than I can count. I love to learn, and to
-              push myself to understand what&apos;s new and what&apos;s next.
-            </p>
+            <p>For the past 7 years, I&apos;ve facilitated workshops on AI, Data Science, and digital innovation for Fortune 500 companies like Mastercard, HSBC, and IBM. I translate complex technical concepts into engaging, actionable learning.</p>
+            <p>Before that, I spent 10 years as an assistant professor at Pennsylvania College of Art &amp; Design, where I developed curriculum and taught web technology to design students. I also led the development of a new BFA program from concept to launch.</p>
+            <p>With 20+ years of building web applications, I understand technology at a fundamental level. When I facilitate, I can separate signal from noise and focus on what people actually need to know.</p>
+            <p>Whether I&apos;m designing curriculum, facilitating a workshop, or developing a program, I&apos;m driven by making complexity clear and watching people connect the dots.</p> 
           </div>
         </div>
       </Layout>
