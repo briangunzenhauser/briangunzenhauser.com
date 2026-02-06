@@ -32,13 +32,31 @@ export default function About() {
             />
           </div>
           <div>
-            <p>
-              Hey, I&apos;m Brian. I design learning experiences and facilitate workshops that help organizations understand emerging technologies.
-            </p>
-            <p>For the past 7 years, I&apos;ve facilitated workshops on AI, Data Science, and digital innovation for Fortune 500 companies like Mastercard, HSBC, and IBM. I translate complex technical concepts into engaging, actionable learning.</p>
-            <p>Before that, I spent 10 years as an assistant professor at Pennsylvania College of Art &amp; Design, where I developed curriculum and taught web technology to design students. I also led the development of a new BFA program from concept to launch.</p>
-            <p>With 20+ years of building web applications, I understand technology at a fundamental level. When I facilitate, I can separate signal from noise and focus on what people actually need to know.</p>
-            <p>Whether I&apos;m designing curriculum, facilitating a workshop, or developing a program, I&apos;m driven by making complexity clear and watching people connect the dots.</p> 
+            <p>Hey, I&rsquo;m Brian. I do two things: build digital solutions and help organizations understand complex technology. I&rsquo;m most effective when I&rsquo;m doing both.</p>
+
+            <p>For the past 20+ years, I&rsquo;ve run parallel careers that feed each other.</p>
+
+            <p>Through Box &amp; Pixel, I help clients think through digital strategy&mdash;SEO implications, UX considerations, technical architecture&mdash;then build the solution with WordPress, custom development, and AI-accelerated workflows. I lead technical discovery, develop proofs of concept, respond to RFPs, and architect solutions from pre-sale through delivery. My WordPress expertise runs deep: enterprise patterns, complex migrations, performance optimization for high-traffic sites, managed hosting environments.</p>
+
+            <p>Through Decoded, I facilitate workshops on emerging tech (AI, Data Science, Blockchain) for Fortune 500 leadership teams at companies like Mastercard, HSBC, and IBM.</p>
+
+            <p>Before that, I taught web technology at Pennsylvania College of Art &amp; Design for over a decade, developed a new BFA program from concept to launch, and served on their Board of Trustees.</p>
+
+            <p>Here&rsquo;s my edge: I maintain active, parallel practices in both development and education, and have for 18+ years. I&rsquo;m hands-on with code and hands-on with people, continuously. I teach AI implementation because I&rsquo;m using AI tools in client projects daily. I can facilitate strategic conversations with executives because I understand what&rsquo;s actually hard about execution. Each practice makes me better at the other.</p>
+
+            <p>Too much facilitation and I need to build something. Too much building and I need to work with people. I can architect technical solutions and explain them to non-technical stakeholders. I understand learning because I&rsquo;ve struggled through the same technical problems I&rsquo;m teaching.</p>
+
+            <p>I&rsquo;m drawn to work where strategic thinking and technical execution overlap&mdash;whether that&rsquo;s solutions engineering, technical consulting, developer relations, or building and teaching.</p>
+
+            <h2>What I Bring</h2>
+            <ul>
+            <li>20+ years WordPress development (enterprise architecture, migrations, performance optimization)</li>
+            <li>18+ years technical education and workshop facilitation</li>
+            <li>Fortune 500 stakeholder communication</li>
+            <li>End-to-end project perspective from pre-sale through delivery</li>
+            </ul>
+
+            <p>Let&rsquo;s connect if you need someone who builds web solutions and translates between technical and human.</p>
           </div>
         </div>
       </Layout>

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className={styles.siteFooter}>
       <div>
-        <p>&copy; 2023 Brian Gunzenhauser</p>
+        <p>&copy; 2026 Brian Gunzenhauser</p>
       </div>
     </footer>
   );

@@ -17,13 +17,12 @@ export default function Home({ allPostsData }) {
 
       <Layout>
         <div>
-          <h1 className={introStyles.introHeading}>Hi, I&apos;m Brian. <span>I design learning experiences and facilitate workshops on emerging technologies for Fortune 500 organizations—backed by 20+ years of technical 
-expertise.</span></h1>
+          <h1 className={introStyles.introHeading}>Hi, I&apos;m Brian. <span>I build digital solutions and speak both technical and human. I&rsquo;m most effective when I&rsquo;m doing both.</span></h1>
 
           <Link href="/about">
             <a className={buttonStyles.buttonLink}>More about me &raquo;</a>
           </Link>
-{/* 
+ 
           <div className={postListStyles.postList}>
             <h2>Recent Posts</h2>
             <ul>
@@ -36,7 +35,7 @@ expertise.</span></h1>
                 </li>
               ))}
             </ul>
-          </div> */}
+          </div>
         </div>
       </Layout>
     </div>
