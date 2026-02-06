@@ -9,3 +9,8 @@
         grid-template-columns: 200px auto;
     }
 }
+
+.listItems {
+    list-style: disc;
+    margin-left: 20px;
+}

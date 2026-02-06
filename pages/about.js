@@ -36,7 +36,7 @@ export default function About() {
 
             <p>For the past 20+ years, I&rsquo;ve run parallel careers that feed each other.</p>
 
-            <p>Through Box &amp; Pixel, I help clients think through digital strategy&mdash;SEO implications, UX considerations, technical architecture&mdash;then build the solution with WordPress, custom development, and AI-accelerated workflows. I lead technical discovery, develop proofs of concept, respond to RFPs, and architect solutions from pre-sale through delivery. My WordPress expertise runs deep: enterprise patterns, complex migrations, performance optimization for high-traffic sites, managed hosting environments.</p>
+            <p>Through Box &amp; Pixel, I help clients think through digital strategies such as technical architecture, API integrations, SEO implications, and UX considerations. I then build the solution with WordPress, custom development, and AI-accelerated workflows. I lead technical discovery, develop proofs of concept, respond to RFPs, and architect solutions from pre-sale through delivery. My WordPress expertise runs deep: enterprise patterns, complex migrations, performance optimization for high-traffic sites, managed hosting environments.</p>
 
             <p>Through Decoded, I facilitate workshops on emerging tech (AI, Data Science, Blockchain) for Fortune 500 leadership teams at companies like Mastercard, HSBC, and IBM.</p>
 
@@ -49,7 +49,7 @@ export default function About() {
             <p>I&rsquo;m drawn to work where strategic thinking and technical execution overlap&mdash;whether that&rsquo;s solutions engineering, technical consulting, developer relations, or building and teaching.</p>
 
             <h2>What I Bring</h2>
-            <ul>
+            <ul className={aboutStyles.listItems}>
             <li>20+ years WordPress development (enterprise architecture, migrations, performance optimization)</li>
             <li>18+ years technical education and workshop facilitation</li>
             <li>Fortune 500 stakeholder communication</li>
