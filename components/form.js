@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useRouter } from 'next/router'
 import formStyles from './Form.module.css'
 import buttonStyles from '../styles/Button.module.css'
 
 export default function Form() {
-    const [status, setStatus] = useState('idle')
+    const router = useRouter()
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -13,8 +13,7 @@ export default function Form() {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams(formData).toString(),
         })
-        setStatus('success')
-        // or router.push('/thanks') if you want to redirect
+        router.push('/thanks')
     }
 
     return (
@@ -29,9 +28,7 @@ export default function Form() {
             <label htmlFor="yourmessage">Your Message</label>
             <textarea name="yourmessage" id="yourmessage" placeholder="Your message"></textarea>
 
-            <button type="submit" className={buttonStyles.buttonLink}>
-                {status === 'success' ? 'Sent!' : 'Send it to me'}
-            </button>
+            <button type="submit" className={buttonStyles.buttonLink}>Send it to me</button>
         </form>
     )
 }
