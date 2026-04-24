@@ -8,6 +8,11 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
                 </Head>
                 <body>
+                    <form name="contact" data-netlify="true" hidden>
+                        <input type="text" name="yourname" />
+                        <input type="email" name="youremail" />
+                        <textarea name="yourmessage"></textarea>
+                    </form>
                     <Main />
                     <NextScript />
                     <noscript
