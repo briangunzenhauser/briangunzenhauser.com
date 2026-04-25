@@ -17,4 +17,6 @@ So, I dug in, and began learning it. And in the process, I figured it'd be a goo
 
 Here's a video on translating the concepts of Custom Post Types and ACF Field Groups into Webflow's Collections. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_2_jbZFSpug?si=zjsDYX8KO9XD1dQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/_2_jbZFSpug?si=zjsDYX8KO9XD1dQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
