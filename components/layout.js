@@ -2,12 +2,12 @@ import Header from './header'
 import Footer from './footer'
 import styles from './Main.module.css'
 
-export default function Layout({ children }) {
+export default function Layout({ children, siteTitle }) {
     return (
         <>
-            <Header />
+            <Header siteTitle={siteTitle} />
             <main className={styles.siteMain}>{children}</main>
-            <Footer />
+            <Footer siteTitle={siteTitle} />
         </>
     )
 }

@@ -1,65 +1,62 @@
-import Head from "next/head";
-import Image from "next/image";
-import BrianGunzenhauser from "../public/brian-gunzenhauser.png";
-import introStyles from "../styles/Intro.module.css";
-import aboutStyles from "../styles/About.module.css";
-import Layout from "../components/layout";
+import Head from 'next/head'
+import Image from 'next/image'
+import { createClient } from 'next-sanity'
+import { PortableText } from '@portabletext/react'
+import Layout from '../components/layout'
+import introStyles from '../styles/Intro.module.css'
+import aboutStyles from '../styles/About.module.css'
+import { urlFor } from '../src/sanity/lib/image'
+import { getSettings } from '../lib/settings'
+import { pageQuery } from '../src/sanity/lib/queries'
 
-export default function About() {
+const client = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  apiVersion: '2026-05-05',
+  useCdn: false,
+})
+
+export default function About({ page, siteTitle }) {
   return (
     <div>
       <Head>
-        <title>About - Brian Gunzenhauser</title>
+        <title>About - {siteTitle}</title>
         <meta name="description" content="about Brian" />
       </Head>
 
-      <Layout>
+      <Layout siteTitle={siteTitle}>
         <h1 className={introStyles.introHeading}>
-          About. <span>A few words about me.</span>
+          {page.introHeading} <span>{page.introSubheading}</span>
         </h1>
 
         <div className={aboutStyles.aboutContent}>
+          {page.image && (
+            <div>
+              <Image
+                src={urlFor(page.image).width(200).height(200).url()}
+                alt={page.image.alt || ''}
+                width={200}
+                height={200}
+                placeholder="blur"
+                blurDataURL={urlFor(page.image).width(20).height(20).blur(10).url()}
+              />
+            </div>
+          )}
           <div>
-            <Image
-              src={BrianGunzenhauser}
-              alt="Picture of Brian Gunzenhauser"
-              width={200}
-              height={200}
-              // width={500} automatically provided
-              // height={500} automatically provided
-              // blurDataURL="data:..." automatically provided
-              placeholder="blur" // Optional blur-up while loading
-            />
-          </div>
-          <div>
-            <p>Hey, I&rsquo;m Brian. I do two things: build digital solutions and help organizations understand complex technology. I&rsquo;m most effective when I&rsquo;m doing both.</p>
-
-            <p>For the past 20+ years, I&rsquo;ve run parallel careers that feed each other.</p>
-
-            <p>Through Box &amp; Pixel, I help clients think through digital strategies such as technical architecture, API integrations, SEO implications, and UX considerations. I then build the solution with WordPress, custom development, and AI-accelerated workflows. I lead technical discovery, develop proofs of concept, respond to RFPs, and architect solutions from pre-sale through delivery. My WordPress expertise runs deep: enterprise patterns, complex migrations, performance optimization for high-traffic sites, managed hosting environments.</p>
-
-            <p>Through Decoded, I facilitate workshops on emerging tech (AI, Data Science, Blockchain) for Fortune 500 leadership teams at companies like Mastercard, HSBC, and IBM.</p>
-
-            <p>Before that, I taught web technology at Pennsylvania College of Art &amp; Design for over a decade, developed a new BFA program from concept to launch, and served on their Board of Trustees.</p>
-
-            <p>Here&rsquo;s my edge: I maintain active, parallel practices in both development and education, and have for 18+ years. I&rsquo;m hands-on with code and hands-on with people, continuously. I teach AI implementation because I&rsquo;m using AI tools in client projects daily. I can facilitate strategic conversations with executives because I understand what&rsquo;s actually hard about execution. Each practice makes me better at the other.</p>
-
-            <p>Too much facilitation and I need to build something. Too much building and I need to work with people. I can architect technical solutions and explain them to non-technical stakeholders. I understand learning because I&rsquo;ve struggled through the same technical problems I&rsquo;m teaching.</p>
-
-            <p>I&rsquo;m drawn to work where strategic thinking and technical execution overlap&mdash;whether that&rsquo;s solutions engineering, technical consulting, developer relations, or building and teaching.</p>
-
-            <h2>What I Bring</h2>
-            <ul className={aboutStyles.listItems}>
-            <li>20+ years WordPress development (enterprise architecture, migrations, performance optimization)</li>
-            <li>18+ years technical education and workshop facilitation</li>
-            <li>Fortune 500 stakeholder communication</li>
-            <li>End-to-end project perspective from pre-sale through delivery</li>
-            </ul>
-
-            <p>Let&rsquo;s connect if you need someone who builds web solutions and translates between technical and human.</p>
+            {page.body && <PortableText value={page.body} />}
           </div>
         </div>
       </Layout>
     </div>
-  );
+  )
+}
+
+export async function getStaticProps() {
+  const [page, settings] = await Promise.all([
+    client.fetch(pageQuery, { slug: 'about' }),
+    getSettings(),
+  ])
+  return {
+    props: { page, siteTitle: settings?.siteTitle || '' },
+  }
 }

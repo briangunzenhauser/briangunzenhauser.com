@@ -1,37 +1,48 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { createClient } from 'next-sanity'
 import Layout from '../components/layout'
 import introStyles from '../styles/Intro.module.css'
 import buttonStyles from '../styles/Button.module.css'
 import postListStyles from '../styles/PostList.module.css'
 import { getSortedPostsData } from '../lib/posts'
+import { getSettings } from '../lib/settings'
+import { pageQuery } from '../src/sanity/lib/queries'
 
-export default function Home({ allPostsData }) {
+const client = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  apiVersion: '2026-05-05',
+  useCdn: false,
+})
+
+export default function Home({ page, allPostsData, siteTitle }) {
   return (
     <div className="container">
       <Head>
-        <title>Home - Brian Gunzenhauser</title>
+        <title>Home - {siteTitle}</title>
         <meta name="description" content="The personal site of Brian Gunzenhauser" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
+      <Layout siteTitle={siteTitle}>
         <div>
-          <h1 className={introStyles.introHeading}>Hi, I&apos;m Brian. <span>I build digital solutions, and translate complex technical concepts into clarity. I&rsquo;m most effective when I&rsquo;m doing both.</span></h1>
+          <h1 className={introStyles.introHeading}>
+            {page.introHeading} <span>{page.introSubheading}</span>
+          </h1>
 
-          <Link href="/about">
-            <a className={buttonStyles.buttonLink}>More about me &raquo;</a>
-          </Link>
- 
+          {page.ctaLabel && page.ctaLink && (
+            <Link href={page.ctaLink} className={buttonStyles.buttonLink}>
+              {page.ctaLabel}
+            </Link>
+          )}
+
           <div className={postListStyles.postList}>
             <h2>Recent Posts</h2>
             <ul>
               {allPostsData.slice(0, 3).map(({ id, title }) => (
                 <li key={id} className={postListStyles.postListItem}>
-                  <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
-                  </Link>
-
+                  <Link href={`/posts/${id}`}>{title}</Link>
                 </li>
               ))}
             </ul>
@@ -43,10 +54,12 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const [page, allPostsData, settings] = await Promise.all([
+    client.fetch(pageQuery, { slug: 'home' }),
+    getSortedPostsData(),
+    getSettings(),
+  ])
   return {
-    props: {
-      allPostsData
-    }
+    props: { page, allPostsData, siteTitle: settings?.siteTitle || '' },
   }
 }

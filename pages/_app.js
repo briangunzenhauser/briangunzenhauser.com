@@ -1,8 +1,5 @@
 import '../styles/globals.css'
 import Script from 'next/script'
-import "prismjs/themes/prism-tomorrow.css";
-import "prismjs/plugins/line-numbers/prism-line-numbers.css";
-// import "../styles/prism-overrides.css";
 
 function MyApp({ Component, pageProps }) {
   return (

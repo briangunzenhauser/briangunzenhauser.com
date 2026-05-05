@@ -3,16 +3,15 @@ import Nav from './nav'
 import styles from './Header.module.css'
 import { useRouter } from "next/router";
 
-export default function Header() {
+export default function Header({ siteTitle }) {
     const router = useRouter();
     return (
         <header className={styles.siteHeader}>
             <div className={styles.headerLogo}>
-                <Link href="/">
-                    <a className={router.pathname == "/" ? "homeCurr" : ""}>Brian <span>Gunzenhauser</span></a>
+                <Link href="/" className={router.pathname == "/" ? "homeCurr" : ""}>
+                    {siteTitle || 'Brian Gunzenhauser'}
                 </Link>
             </div>
-
             <Nav />
         </header>
     )

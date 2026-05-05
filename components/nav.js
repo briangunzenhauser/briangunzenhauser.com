@@ -8,21 +8,15 @@ export default function Nav() {
         <nav className={styles.mainNav}>
             <ul>
                 <li>
-                    <Link href="/about">
-                        <a className={router.pathname == "/about" ? "curr" : ""}>About</a>
-                    </Link>
+                    <Link href="/about" className={router.pathname == "/about" ? "curr" : ""}>About</Link>
                 </li>
 
                 <li>
-                    <Link href="/posts">
-                        <a className={router.pathname == "/posts" ? "curr" : router.pathname === "/posts/[id]" ? "curr" : ""}>Posts</a>
-                    </Link>
+                    <Link href="/posts" className={router.pathname == "/posts" ? "curr" : router.pathname === "/posts/[id]" ? "curr" : ""}>Posts</Link>
                 </li>
 
                 <li>
-                    <Link href="/contact">
-                        <a className={router.pathname == "/contact" ? "curr" : ""}>Contact</a>
-                    </Link>
+                    <Link href="/contact" className={router.pathname == "/contact" ? "curr" : ""}>Contact</Link>
                 </li>
 
             </ul>
