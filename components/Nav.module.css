@@ -36,6 +36,8 @@
 .mainNav>ul>li:not(:last-child) a::after {
     content: "/";
     color: white;
+    -webkit-text-fill-color: white;
+    background: none;
     position: absolute;
     right: -1rem;
     cursor: default;

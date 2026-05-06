@@ -8,7 +8,7 @@ export default function Header({ siteTitle }) {
     return (
         <header className={styles.siteHeader}>
             <div className={styles.headerLogo}>
-                <Link href="/" className={router.pathname == "/" ? "homeCurr" : ""}>
+                <Link href="/" className={`galaxyText${router.pathname == "/" ? " homeCurr" : ""}`}>
                     {siteTitle || 'Brian Gunzenhauser'}
                 </Link>
             </div>
