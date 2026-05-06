@@ -19,7 +19,7 @@ export default function Posts({ page, allPostsData, siteTitle }) {
   return (
     <div>
       <Head>
-        <title>Posts - {siteTitle}</title>
+        <title>{`Posts - ${siteTitle}`}</title>
         <meta name="description" content="Posts by Brian Gunzenhauser" />
       </Head>
 

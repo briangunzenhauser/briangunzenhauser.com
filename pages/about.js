@@ -20,7 +20,7 @@ export default function About({ page, siteTitle }) {
   return (
     <div>
       <Head>
-        <title>About - {siteTitle}</title>
+        <title>{`About - ${siteTitle}`}</title>
         <meta name="description" content="about Brian" />
       </Head>
 

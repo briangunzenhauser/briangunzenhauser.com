@@ -20,7 +20,7 @@ export default function Home({ page, allPostsData, siteTitle }) {
   return (
     <div className="container">
       <Head>
-        <title>Home - {siteTitle}</title>
+        <title>{`Home - ${siteTitle}`}</title>
         <meta name="description" content="The personal site of Brian Gunzenhauser" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

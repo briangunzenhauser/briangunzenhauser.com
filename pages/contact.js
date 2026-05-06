@@ -18,7 +18,7 @@ export default function Contact({ page, siteTitle }) {
   return (
     <div>
       <Head>
-        <title>Contact - {siteTitle}</title>
+        <title>{`Contact - ${siteTitle}`}</title>
         <meta name="description" content="Contact Brian Gunzenhauser" />
       </Head>
 
