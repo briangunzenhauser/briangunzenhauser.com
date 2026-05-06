@@ -11,7 +11,7 @@
   --border: dotted 1px white;
   --border__body: dotted 0.2ch hsla(200, 10%, 50%, 1);
   --border__radius: 0.25rem;
-  --gradient__galaxy: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  --gradient__galaxy: linear-gradient(135deg, #2dd4bf, #38bdf8, #818cf8, #c084fc);
   /* --breakpoint__medium: 768px;
     --breakpoint__large: 960px; */
 }

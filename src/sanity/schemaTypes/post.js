@@ -35,7 +35,33 @@ export const post = defineType({
       title: 'Body',
       type: 'array',
       of: [
-        {type: 'block'},
+        {
+          type: 'block',
+          marks: {
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: 'Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'URL',
+                    validation: (Rule) =>
+                      Rule.uri({scheme: ['http', 'https', 'mailto']}),
+                  },
+                  {
+                    name: 'blank',
+                    type: 'boolean',
+                    title: 'Open in new tab',
+                    initialValue: false,
+                  },
+                ],
+              },
+            ],
+          },
+        },
         {type: 'image', options: {hotspot: true}},
         {type: 'youtube'},
       ],
