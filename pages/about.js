@@ -45,6 +45,7 @@ export default function About({ page, siteTitle }) {
           <div>
             {page.body && <PortableText value={page.body} />}
           </div>
+        
         </div>
       </Layout>
     </div>

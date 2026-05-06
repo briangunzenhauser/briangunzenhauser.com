@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { createClient } from 'next-sanity'
 import Layout from '../components/layout'
+import Button from '../components/Button'
 import introStyles from '../styles/Intro.module.css'
-import buttonStyles from '../styles/Button.module.css'
 import postListStyles from '../styles/PostList.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import { getSettings } from '../lib/settings'
@@ -31,11 +31,7 @@ export default function Home({ page, allPostsData, siteTitle }) {
             {page.introHeading} <span>{page.introSubheading}</span>
           </h1>
 
-          {page.ctaLabel && page.ctaLink && (
-            <Link href={page.ctaLink} className={buttonStyles.buttonLink}>
-              {page.ctaLabel}
-            </Link>
-          )}
+
 
           <div className={postListStyles.postList}>
             <h2>Recent Posts</h2>
@@ -47,6 +43,10 @@ export default function Home({ page, allPostsData, siteTitle }) {
               ))}
             </ul>
           </div>
+
+          {page.ctaLabel && page.ctaLink && (
+            <Button href={page.ctaLink}>{page.ctaLabel}</Button>
+          )}          
         </div>
       </Layout>
     </div>

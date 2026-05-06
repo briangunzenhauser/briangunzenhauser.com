@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
+import Button from './Button'
 import formStyles from './Form.module.css'
-import buttonStyles from '../styles/Button.module.css'
 
 export default function Form() {
     const router = useRouter()
@@ -35,7 +35,7 @@ export default function Form() {
             <label htmlFor="yourmessage">Your Message</label>
             <textarea name="yourmessage" id="yourmessage" placeholder="Your message" required></textarea>
 
-            <button type="submit" className={buttonStyles.buttonLink}>Send it to me</button>
+            <Button type="submit">Send it to me</Button>
         </form>
     )
 }
