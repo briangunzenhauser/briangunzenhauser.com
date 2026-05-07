@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 import Layout from '../../components/layout'
 import YoutubeEmbed from '../../components/YoutubeEmbed'
@@ -34,6 +35,11 @@ export default function Post({ postData, siteTitle }) {
   return (
     <Layout siteTitle={siteTitle}>
       <div className={postStyles.post}>
+        <nav className={postStyles.breadcrumb}>
+          <Link href="/posts">Posts</Link>
+          <span className={postStyles.separator}>&gt;</span>
+          <span className={postStyles.current}>{postData.title}</span>
+        </nav>
         <Date dateString={postData.date} />
         <br />
         <PortableText value={postData.body} components={portableTextComponents} />

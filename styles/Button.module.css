@@ -17,4 +17,5 @@
 .buttonLink:hover {
     background: var(--gradient__galaxy) padding-box, var(--gradient__galaxy) border-box;
     color: var(--color__primary);
+    text-decoration: none;
 }

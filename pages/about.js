@@ -37,8 +37,6 @@ export default function About({ page, siteTitle }) {
                 alt={page.image.alt || ''}
                 width={200}
                 height={200}
-                placeholder="blur"
-                blurDataURL={urlFor(page.image).width(20).height(20).blur(10).url()}
               />
             </div>
           )}

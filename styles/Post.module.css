@@ -1,8 +1,28 @@
-.post time {
-    font-size: 1rem;
-    /* margin-bottom: 0.5rem; */
-    display: block;
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+    color: var(--color__link);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .separator,
+.breadcrumb .current {
     color: hsla(0, 0%, 50%, 1);
+}
+
+.post time {
+    font-size: 14px;
+    display: block;
+    color: white;
 }
 
 .post h1 {

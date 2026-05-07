@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { createClient } from 'next-sanity'
 import Layout from '../components/layout'
 import Button from '../components/Button'
@@ -38,7 +39,7 @@ export default function Home({ page, allPostsData, siteTitle }) {
             <ul>
               {allPostsData.slice(0, 3).map(({ id, title }) => (
                 <li key={id} className={postListStyles.postListItem}>
-                  <Link href={`/posts/${id}`}>{title}</Link>
+                  <Link href={`/posts/${id}`}>{title}<ArrowRight size={16} strokeWidth={2} className={postListStyles.arrow} /></Link>
                 </li>
               ))}
             </ul>

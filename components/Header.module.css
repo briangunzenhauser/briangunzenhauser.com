@@ -31,3 +31,7 @@
 .headerLogo>a.curr {
     color: #E6DB74;
 }
+
+.headerLogo a:hover {
+    text-decoration: none;
+}

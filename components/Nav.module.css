@@ -28,9 +28,17 @@
 }
 
 .mainNav a {
-    font-size: 1.2rem;
+    font-size: 14px;
     position: relative;
     padding-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mainNav a:hover {
+    color: #818cf8;
+    text-decoration: none;
 }
 
 .mainNav>ul>li:not(:last-child) a::after {
