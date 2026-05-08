@@ -24,13 +24,14 @@
     font-weight: 800;
 }
 
-.headerLogo span {
+.headerLogo > span {
     display: table;
 }
 
 .headerLogo>a.curr {
     color: #E6DB74;
 }
+
 
 .headerLogo a:hover {
     text-decoration: none;
