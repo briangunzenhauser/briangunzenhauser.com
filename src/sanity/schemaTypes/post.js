@@ -31,12 +31,33 @@ export const post = defineType({
       rows: 3,
     }),
     defineField({
+      name: 'coverImage',
+      title: 'Cover image',
+      description: 'Optional. Without one, the post gets a generated gradient cover.',
+      type: 'image',
+      options: {hotspot: true},
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alt text',
+          type: 'string',
+        }),
+      ],
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'array',
       of: [
         {
           type: 'block',
+          styles: [
+            {title: 'Normal', value: 'normal'},
+            {title: 'H2', value: 'h2'},
+            {title: 'H3', value: 'h3'},
+            {title: 'H4', value: 'h4'},
+            {title: 'Pull quote', value: 'blockquote'},
+          ],
           marks: {
             annotations: [
               {
@@ -68,9 +89,9 @@ export const post = defineType({
     }),
   ],
   preview: {
-    select: {title: 'title', date: 'date'},
-    prepare({title, date}) {
-      return {title, subtitle: date}
+    select: {title: 'title', date: 'date', media: 'coverImage'},
+    prepare({title, date, media}) {
+      return {title, subtitle: date, media}
     },
   },
 })

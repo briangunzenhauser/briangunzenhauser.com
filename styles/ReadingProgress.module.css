@@ -1,0 +1,17 @@
+.track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: none;
+    height: 3px;
+    z-index: 10000; /* above the sticky site header (9999) */
+    pointer-events: none;
+}
+
+.bar {
+    height: 100%;
+    background: var(--gradient__galaxy);
+    transform: scaleX(0);
+    transform-origin: left center;
+}

@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { createClient } from 'next-sanity'
 import Layout from '../../components/layout'
 import introStyles from '../../styles/Intro.module.css'
 import postListStyles from '../../styles/PostList.module.css'
+import cardStyles from '../../styles/PostCard.module.css'
+import PostCard from '../../components/PostCard'
 import { getSortedPostsData } from '../../lib/posts'
 import { getSettings } from '../../lib/settings'
 import { pageQuery } from '../../src/sanity/lib/queries'
@@ -30,14 +30,15 @@ export default function Posts({ page, allPostsData, siteTitle }) {
         </h1>
 
         <div className={postListStyles.postList}>
-          <h2>All Posts</h2>
-          <ul>
-            {allPostsData.map(({ id, title }) => (
-              <li key={id} className={postListStyles.postListItem}>
-                <Link href={`/posts/${id}`}>{title}<ArrowRight size={16} strokeWidth={2} className={postListStyles.arrow} /></Link>
-              </li>
+          <h2 className={postListStyles.eyebrow}>
+            <span aria-hidden="true">// </span>All posts
+          </h2>
+          {allPostsData[0] && <PostCard post={allPostsData[0]} featured frameless priority />}
+          <div className={cardStyles.grid}>
+            {allPostsData.slice(1).map((post) => (
+              <PostCard key={post.id} post={post} frameless />
             ))}
-          </ul>
+          </div>
         </div>
       </Layout>
     </div>

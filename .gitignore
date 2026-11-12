@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# local Claude Code guide (names account emails; repo is public)
+CLAUDE.md

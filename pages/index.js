@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { createClient } from 'next-sanity'
 import Layout from '../components/layout'
 import Button from '../components/Button'
 import introStyles from '../styles/Intro.module.css'
 import postListStyles from '../styles/PostList.module.css'
+import cardStyles from '../styles/PostCard.module.css'
+import PostCard from '../components/PostCard'
 import { getSortedPostsData } from '../lib/posts'
 import { getSettings } from '../lib/settings'
 import { pageQuery } from '../src/sanity/lib/queries'
@@ -35,14 +35,14 @@ export default function Home({ page, allPostsData, siteTitle }) {
 
 
           <div className={postListStyles.postList}>
-            <h2>Recent Posts</h2>
-            <ul>
-              {allPostsData.slice(0, 3).map(({ id, title }) => (
-                <li key={id} className={postListStyles.postListItem}>
-                  <Link href={`/posts/${id}`}>{title}<ArrowRight size={16} strokeWidth={2} className={postListStyles.arrow} /></Link>
-                </li>
+            <h2 className={postListStyles.eyebrow}>
+              <span aria-hidden="true">// </span>Recent
+            </h2>
+            <div className={cardStyles.grid}>
+              {allPostsData.slice(0, 3).map((post) => (
+                <PostCard key={post.id} post={post} frameless />
               ))}
-            </ul>
+            </div>
           </div>
 
           {page.ctaLabel && page.ctaLink && (

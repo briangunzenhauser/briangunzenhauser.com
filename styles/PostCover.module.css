@@ -1,0 +1,30 @@
+.cover {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border__radius);
+    background-color: var(--color__primary--main);
+}
+
+.card {
+    aspect-ratio: 16 / 9;
+}
+
+.square {
+    aspect-ratio: 1 / 1;
+}
+
+.hero {
+    aspect-ratio: 21 / 9;
+    margin-bottom: 2rem;
+}
+
+.image {
+    object-fit: cover;
+}
+
+/* Generated gradient fallback: pulled back so it doesn't shout. 1 = full
+   saturation, 0 = greyscale. */
+.generated {
+    filter: saturate(0.5);
+}
